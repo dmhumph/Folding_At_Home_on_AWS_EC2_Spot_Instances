@@ -28,7 +28,7 @@ I run my playbook using Ansible tower, but it can be modified easily to run as a
 
 The playbook can now be ran:
 ```
-anisble-playbook -i hosts foldathome_AWS.yaml
+ansible-playbook -i hosts foldathome_AWS.yaml
 ```
 
 Once the playbook runs (takes about 5 minutes) it will install Fold at Home, configure it with your information, install VNC, and all the dependancies needed.  
