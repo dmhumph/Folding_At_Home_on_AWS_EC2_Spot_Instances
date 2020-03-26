@@ -1,6 +1,8 @@
 # Folding at Home on Amazon EC2 Spot Instances using Ansible to automate configuration
 This will walk through how to request the proper spot instance in AWS, then configure the instance to run Foldng at Home!
 
+https://foldingathome.org/
+
 ## Download this repo to use and modify for your information
 git clone this repo to view and modify and run ansible playbook.
 
