@@ -42,6 +42,6 @@ vncserver
 
 ## Access your VNC session
 
-Now use a VNC client and use your DNS name and port 5901 to connect to it.  You will need to use your password from earlier in the configuration.  Once logged in you can access the Fold at Home client throuth the top left icon and under "Science". 
+Now use a VNC client and use your DNS name and port 5901 to connect to it.  You will need to use your password from earlier in the configuration.  Once logged in you can access the Folding at Home controler through the top left icon and under "Science". 
 
 If you can't access your host, you may need to check the security group and allow inbound/outbound traffic to allow VNC to work properly.
