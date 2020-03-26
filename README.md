@@ -1,4 +1,4 @@
-# Folding at Home on Amazon EC2 Spot Instances using Ansible to automate configuration
+# Folding at Home on Amazon EC2 Spot Instances using Ansible to automate configuration of F@H and VNCserver to view your F@H Client!
 This will walk through how to request the proper spot instance in AWS, then configure the instance to run Foldng at Home!
 
 https://foldingathome.org/
