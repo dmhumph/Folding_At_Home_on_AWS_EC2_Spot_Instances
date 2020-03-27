@@ -4,11 +4,21 @@ This will walk through how to request the proper spot instance in AWS, then conf
 https://foldingathome.org/
 
 ## Download this repo to use and modify for your information
-git clone this repo to view and modify and run ansible playbook.
+git clone this repo to view, modify and run ansible playbook.
 
-You will need some information for your client to use Fold at Home and will use this information in your config.xml.  https://apps.foldingathome.org/getpasskey.  In the name field whatever you username will be, and then enter your email.  You will then receive an email with your passkey.  Use the same username and then the passkey in the config.xml file in this repo.  You also need a team number, and if you want to join our Red Hat team you can use the team number 11812 in your config.xml.
+You will need some information for your client to use Fold at Home. https://apps.foldingathome.org/getpasskey.  In the name field enter your username, and then enter your email where required.  Your passkey will then be sent to the provided email address.  
 
-Make sure to go through the foldathome_AWS.yaml file and edit any fields needed such as custom passwords, and folder paths of where your config.xml and xstartup files are located on your host machine.
+### config.xml
+We are provided a default config.xml that you will edit.
+
+* Add yourpasskey and yourusername to the config.xml where specified.  
+* The team number is prepopulated with the Red Hat team, but you can edit this if you prefer something different.
+
+### foldathome_AWS.yaml
+Make sure to go through the foldathome_AWS.yaml file and edit any fields needed.
+
+* Such as custom passwords
+* folder paths of where your config.xml and xstartup files are located on your host machine.
 
 ## Request AWS EC2 Spot instance
 Login to AWS Console first: https://aws.amazon.com/console/ and click on the "Sign in to the Console" button in the upper right of the screen.
@@ -19,7 +29,13 @@ Now on the left side of the screen you will see a group called "Instances" under
 
 Next, click on the Blue "Request Spot Instances" button.
 
-On the next page select the far right radio button "Defined duration workloads" and the select the duration you would like... I typically go with 6 hours.  Now select tha Amazon AMI by choosing the "Search for AMI" button and search for "ami-04e6cde49c31596d5" and select Community AMIs.  Then hit the "Select" button.  Now you want to choose your instance type by selecting "Change Instance type" button.  In the "Instance type" dropdown select "GPU instances" and then select the first check box for the instance type "g4dn.xlarge" This instance type provides a high power GPU for use on your Fold at Home work units. Now hit the "Select" button. Now just accept the rest of the default values unless you need to change anything specific (Make sure you have the "Key pair" and if not generate a new one to use). Now to finish click "Submit", which will issue your spot request and depending on availablity of that instance type it will be fulfilled.  Now go to your EC2 Dashboard and look at your instances, and you should see your running instance now there.
+* On the next page select the far right radio button "Defined duration workloads" and the select the duration you would like... I typically go with 6 hours.  
+* Now select tha Amazon AMI by choosing the "Search for AMI" button and search for "ami-04e6cde49c31596d5" and select Community AMIs.  Then hit the "Select" button.  
+* Now you want to choose your instance type by selecting "Change Instance type" button.  
+* In the "Instance type" dropdown select "GPU instances" and then select the first check box for the instance type "g4dn.xlarge" This instance type provides a high power GPU for use on your Fold at Home work units. 
+* Now hit the "Select" button. Now just accept the rest of the default values unless you need to change anything specific (Make sure you have the "Key pair" and if not generate a new one to use). 
+* Now to finish click "Submit", which will issue your spot request and depending on availablity of that instance type it will be fulfilled.  
+* Now go to your EC2 Dashboard and look at your instances, and you should see your running instance now there.
 
 You will want to copy the "Public DNS (IPv4)" information so we can use with our Ansible playbook and ssh to the host.
 
