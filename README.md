@@ -30,7 +30,7 @@ Now on the left side of the screen you will see a group called "Instances" under
 Next, click on the Blue "Request Spot Instances" button.
 
 * On the next page select the far right radio button "Defined duration workloads" and the select the duration you would like... I typically go with 6 hours.  
-* Now select tha Amazon AMI by choosing the "Search for AMI" button and search for "ami-04e6cde49c31596d5" and select Community AMIs.  Then hit the "Select" button.  
+* Now select tha Amazon AMI by choosing the "Search for AMI" button and search for "ami-0f7dbf59d7397e89d" and select Community AMIs.  Then hit the "Select" button.  
 * Now you want to choose your instance type by selecting "Change Instance type" button.  
 * In the "Instance type" dropdown select "GPU instances" and then select the first check box for the instance type "g4dn.xlarge" This instance type provides a high power GPU for use on your Fold at Home work units. 
 * Now hit the "Select" button. Now just accept the rest of the default values unless you need to change anything specific (Make sure you have the "Key pair" and if not generate a new one to use). 
